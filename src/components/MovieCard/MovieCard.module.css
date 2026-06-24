@@ -1,6 +1,7 @@
 .card {
     padding: 20px;
     padding-top: 40px;
+    width: 30%;
     justify-content: center;
     align-items: center;
     gap: 3vh;
@@ -36,4 +37,8 @@
 
 .deleteButton{
     left: 5px;
+}
+.active {
+    color: #22c55e;
+    opacity: 1;
 }

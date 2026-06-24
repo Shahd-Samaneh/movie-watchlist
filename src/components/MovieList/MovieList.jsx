@@ -3,17 +3,19 @@ import styles from './MovieList.module.css';
 import MovieCard from '../MovieCard/MovieCard';
 import '../../index.css';
 
-
-const MovieList = (props) => {
+const MovieList = ({ movies, onToggleWatched, onDelete }) => {
     return (
-        <>
-            <div className={`${styles.movieList} flex-row container`}>
-                {props.movies.map(movie =>
-                    <MovieCard key={movie.id} movie={movie} />
-                )}
-            </div>
-        </>
+        <div className={`${styles.movieList} flex-row container`}>
+            {movies.map((movie) => (
+                <MovieCard
+                    key={movie.id}
+                    movie={movie}
+                    onToggleWatched={onToggleWatched}
+                    onDelete={onDelete}
+                />
+            ))}
+        </div>
     )
 }
 
-export default MovieList
+export default MovieList;
