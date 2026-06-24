@@ -7,13 +7,14 @@ const MovieCard = ({ movie, onToggleWatched, onDelete }) => {
   console.log(movie);
   return (
     <div className={`${styles.card} flex-col`}>
-      <h3>{movie.title}</h3>
+      <h3 className={movie.watched ? styles.watchedTitle : ''}>
+        {movie.title}
+      </h3>
 
       <div className={`${styles.actions} flex-row`}>
         <button
-          className={`${styles.watchedButton} ${
-            movie.watched ? styles.active : ''
-          }`}
+          className={`${styles.watchedButton} ${movie.watched ? styles.active : ''
+            }`}
           onClick={() => onToggleWatched(movie.id)}
         >
           <IoCheckmark size={30} />

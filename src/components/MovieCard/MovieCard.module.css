@@ -51,6 +51,9 @@
     color: #22c55e;
     opacity: 1;
 }
+.watchedTitle {
+    text-decoration: line-through;
+}
 
 @media (max-width: 768px) {
     .card {
