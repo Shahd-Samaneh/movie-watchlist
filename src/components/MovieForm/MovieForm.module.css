@@ -1,0 +1,70 @@
+.formStyle {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.inputContainer input {
+    width: 100%;
+    height: 60px;
+    padding: 0 70px 0 20px;
+    border-radius: 16px;
+    background-color: #1F1F1F;
+    color: white;
+    font-size: 16px;
+    caret-color: white;
+}
+
+.inputContainer button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+
+.inputContainer button:hover {
+    background: #F33F3F;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .inputContainer input {
+        height: 50px;
+        font-size: 14px;
+        padding: 0 60px 0 15px;
+    }
+
+    .inputContainer button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inputContainer input {
+        height: 45px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .inputContainer button {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+    }
+}
