@@ -1,7 +1,9 @@
 .card {
+
+    width: 30%;
+    min-width: 280px;
     padding: 20px;
     padding-top: 40px;
-    width: 30%;
     justify-content: center;
     align-items: center;
     gap: 3vh;
@@ -10,20 +12,25 @@
     border-radius: 5px;
     position: relative;
     background-color: #1F1F1F;
-    color:#E1E1E1 ;
+    color: #E1E1E1;
     box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.08);
 }
+
 
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
 }
-.card:hover .deleteButton ,.card:hover .watchedButton{
-    
+
+.card:hover .deleteButton,
+.card:hover .watchedButton {
+
     opacity: 1;
 }
-.watchedButton , .deleteButton{
-    color:#ffff ;
+
+.watchedButton,
+.deleteButton {
+    color: #ffff;
     background-color: transparent;
     cursor: pointer;
     position: absolute;
@@ -31,14 +38,33 @@
     opacity: 0;
     transition: 0.5s;
 }
-.watchedButton{
+
+.watchedButton {
     right: 5px;
 }
 
-.deleteButton{
+.deleteButton {
     left: 5px;
 }
+
 .active {
     color: #22c55e;
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .watchedButton,
+    .deleteButton {
+        opacity: 1;
+    }
 }
